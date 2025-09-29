@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TechNova — Satellite & Telecom (Landing Page)</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
   <meta name="description" content="TechNova — solusi telekomunikasi & teknologi satelit. Menghubungkan dunia tanpa batas." />
 </head>
 <body>
@@ -246,23 +247,5 @@
       </footer>
     </section>
   </main>
-
-  <script>
-    // Small helpers
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    function scrollToContact(){
-      document.getElementById('contact').scrollIntoView({behavior:'smooth'});
-    }
-
-    // Smooth scroll for nav links
-    document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        const target = document.querySelector(a.getAttribute('href'));
-        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
-      })
-    });
-  </script>
 </body>
 </html> 
