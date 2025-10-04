@@ -164,14 +164,14 @@
     .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px;color:var(--muted)}
     
     #Foto {
-      width: 200px;
-      margin: 20px 20px;
-      justify-content: center;
-      transition: transform 0.3s ease;
+    width: 200px;
+    margin: 20px 20px;
+    justify-content: center;
+    transition: transform 0.3s ease; /* animasi halus */
     }
-  
+
     #Foto:hover {
-    transform: scale(3.4); /* zoom 10% */
+    transform: scale(1.1); /* zoom 10% */
     }
 .vm-section {
   margin-top: 30px;
@@ -217,6 +217,51 @@
 .vm-panel.active {
   display: block;
 }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #services .card {
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.06);
+    transition:all 0.3s ease;
+    text-align:center;
+  }
+
+  #services .card:hover {
+    transform:translateY(-6px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+  }
+
+  #services .card .icon {
+    font-size:32px;
+    margin-bottom:12px;
+  }
+
+  #services .card strong {
+    display:block;
+    font-size:16px;
+    margin-bottom:8px;
+    color:#111827;
+  }
+
+  #services .card p {
+    font-size:14px;
+    color:#6b7280;
+    line-height:1.5;
+  }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px);}
